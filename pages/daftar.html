@@ -1,0 +1,20 @@
+<section class="blk"><div class="wrap" style="max-width:640px">
+  <h2>Layanan warga</h2>
+  <div class="tabs"><button class="on" data-t="reg">Registrasi Warga</button><button data-t="req">Request Penjemputan</button></div>
+  <form id="fReg" class="card" action="api/register.php" method="POST" novalidate>
+    <label>Nama lengkap</label><input name="nama" autocomplete="name"><span class="err"></span>
+    <label>Email</label><input name="email" type="email" autocomplete="email"><span class="err"></span>
+    <label>No. HP</label><input name="no_hp" inputmode="numeric" placeholder="08xxxxxxxxxx"><span class="err"></span>
+    <label>Alamat (blok dan no. rumah)</label><textarea name="alamat" rows="2"></textarea><span class="err"></span>
+    <label>Password</label><input name="password" type="password" autocomplete="new-password"><span class="err"></span>
+    <label>Konfirmasi password</label><input name="konfirmasi" type="password" autocomplete="new-password"><span class="err"></span>
+    <p><button class="btn" type="submit">Daftar sekarang</button></p>
+  </form>
+  <form id="fReq" class="card" style="display:none" action="api/pickup.php" method="POST" novalidate>
+    <label>Alamat penjemputan</label><textarea id="alamat_jemput" rows="2"></textarea><span class="err"></span>
+    <label>Jenis sampah</label><div class="chk" id="jenisChk"></div><span class="err" id="jenisErr"></span>
+    <label>Catatan (opsional)</label><textarea id="catatan" rows="2" placeholder="Contoh: taruh di depan pagar"></textarea><span class="err"></span>
+    <div class="notice">Tarif penjemputan flat <b id="tarifInfo"></b> per request. Status awal: Menunggu.</div>
+    <button class="btn" type="submit">Kirim request</button>
+  </form>
+</div></section>

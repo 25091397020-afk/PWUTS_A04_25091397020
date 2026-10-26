@@ -1,0 +1,19 @@
+<section class="blk"><div class="wrap">
+  <h2>Katalog 3 jenis sampah</h2>
+  <p class="muted">Hanya tiga jenis ini yang diterima. Sampah bersih selalu dihargai lebih tinggi.</p>
+  <div class="cards" id="katalog"></div>
+</div></section>
+<section class="blk" style="background:#f3ece9"><div class="wrap">
+  <h2>Kalkulator kotor vs bersih</h2>
+  <div class="cards" style="grid-template-columns:1fr 1fr">
+    <div><label for="cJenis">Jenis sampah</label><select id="cJenis"></select></div>
+    <div><label for="cBerat">Berat (kg)</label><input id="cBerat" inputmode="decimal" placeholder="contoh: 3.5"><span class="err" id="cErr"></span></div>
+  </div>
+  <div id="cOut" style="display:none">
+    <div class="cmp">
+      <div class="card"><span class="tag">Kotor</span><div class="big" id="oK"></div></div>
+      <div class="card good"><span class="tag">Bersih</span><div class="big" id="oB"></div></div>
+    </div>
+    <div class="notice" id="oD"></div>
+  </div>
+</div></section>
